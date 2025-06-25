@@ -26,7 +26,7 @@ char turn(char *position, char *direction) {
     }
 }
 
-int main() {
+int part1() {
     FILE *file = fopen("data/day1", "r");
 
     fseek(file, 0, SEEK_END);
@@ -66,8 +66,13 @@ int main() {
         token = strtok(NULL, " ");
     }
     int blocks = abs(x) + abs(y);
-    printf("Total blocks: %d\n", blocks);
     fclose(file);
+
+    return blocks;
+}
+
+int main() {
+    printf("Part 1: %d\n", part1());
 
     return 0;
 }
