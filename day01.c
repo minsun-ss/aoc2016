@@ -37,7 +37,7 @@ int part1() {
     size_t bytes_read = fread(buffer, 1, file_size, file);
     buffer[file_size] = '\0';
 
-    // now split that shit
+    // tokenizing, y u so hard in c
     int x = 0, y = 0;
     char direction = 'N';
 
